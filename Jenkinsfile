@@ -22,6 +22,11 @@ pipeline {
                bat 'mvn tomcat7:deploy'
             }
         }
+        stage('send email'){
+            steps {
+               bat 'echo "sending emails'
+            }
+        }
         
     }
 }
