@@ -22,7 +22,8 @@ pipeline {
                bat 'mvn tomcat7:deploy'
             }
         }
-        post {
+    }
+      post {
             always {
                 emailext (
                     to: "nagapatukuru@gmail.com",
@@ -31,5 +32,4 @@ pipeline {
                     )
             }
         }
-    }
 }
