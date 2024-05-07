@@ -26,7 +26,7 @@ pipeline {
             always {
                 emailext (
                     to: "nagapatukuru@gmail.com",
-                    subject: "BUILD ${currentBuild.result},
+                    subject: "BUILD ${currentBuild.result}",
                     attachLog:true
                     )
             }
