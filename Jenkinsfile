@@ -22,11 +22,14 @@ pipeline {
                bat 'mvn tomcat7:deploy'
             }
         }
-        stage('send email'){
-            steps {
-               bat 'echo "sending emails'
+        post {
+            always {
+                emailext (
+                    to: "nagapatukuru@gmail.com",
+                    subject: "BUILD ${currentBuild.result}
+                    attachLog:true
+                    )
             }
         }
-        
     }
 }
