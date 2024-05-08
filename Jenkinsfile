@@ -17,11 +17,6 @@ pipeline {
                bat 'mvn clean package'
             }
         }
-         stage('tomcat'){
-            steps {
-               bat 'mvn tomcat7:deploy'
-            }
-        }
     }
       post {
         always {
