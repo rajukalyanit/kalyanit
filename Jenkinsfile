@@ -19,7 +19,7 @@ pipeline {
         }
          stage('tomcat'){
             steps {
-               bat 'mvn tomcat7:'
+               bat 'mvn tomcat7:deploy'
             }
         }
     }
